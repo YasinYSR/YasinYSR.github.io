@@ -14,3 +14,26 @@ $(document).ready(function(){
 });
 
 });
+
+const slideContainer = document.querySelector("#slideContainer");
+const slides = document.querySelectorAll("#slide img");
+
+// Current slide
+let currentSlide = 0;
+
+// Show initial slide
+slides[currentSlide].style.opacity = 1;
+
+// Change slide every 2 seconds
+setInterval(changeSlide, 2000);
+
+function changeSlide() {
+  // Fade out current slide
+  slides[currentSlide].style.opacity = 0;
+
+  // Change current slide
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  // Fade in new slide
+  slides[currentSlide].style.opacity = 1;
+}
