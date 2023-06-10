@@ -12,7 +12,7 @@
 }
 body{
     background-color: var(--white);
-    font-family:'Courier New', Courier, sans-serif;
+    font-family:'Libre Baskerville';
 }
 a{
     text-decoration: none;
